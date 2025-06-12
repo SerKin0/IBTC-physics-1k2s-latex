@@ -1,0 +1,111 @@
+\subsection{Средняя длина свободного пробега молекул в газах}
+
+\textbf{Средняя длина свободного пробега} - это среднее расстояние, проходимое молекулой между двумя соударениями. Обозначается как $\lambda \, [\text{м}]$.
+
+\begin{table}[h]
+	\centering
+	\caption{Эффективные диаметры атомов и молекул в газовой фазе}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Элемент} & \textbf{Символ} & \textbf{Эффективный диаметр, \( d \, (\mathring{A})\) } \\
+		\hline
+		Гелий & He & 2,0 \\
+		Неон & Ne & 2,2 \\
+		Аргон & Ar & 3,6 \\
+		Криптон & Kr & 4,0 \\
+		Ксенон & Xe & 4,5 \\
+		Радон & Rn & 5,0 \\
+		\hline
+		Водород & H\textsubscript{2} & 2,4 \\
+		Азот & N\textsubscript{2} & 3,7 \\
+		Кислород & O\textsubscript{2} & 3,5 \\
+		Углекислый газ & CO\textsubscript{2} & 4,6 \\
+		\hline
+	\end{tabular}
+	\label{tab:diameters}
+\end{table}
+
+Будем считать что все молекулы кроме одной неподвижны. Среднее расстояние проходимое молекулой за время $t$ тогда будет равно:
+\[
+L = \langle v\rangle \cdot t \quad \text{и} \quad V = \pi d^2 L = \pi d^2 \langle v \rangle t
+\]
+
+Среднее \textit{число соударений}:
+\[
+z = Vn = \pi d^2 n \langle v\rangle t
+\]
+
+Средняя \textit{частота соударения}:
+\[
+\vartheta = \frac{z}{t} = \pi d^2 n \langle v \rangle
+\]
+
+Средняя \textit{длина свободного пробега}:
+\[
+\lambda = \frac{\langle v \rangle}{\vartheta} = \frac{1}{\pi d^2 n}
+\]
+
+Если учитывать движение всех молекул, то:
+\[
+\vartheta = \sqrt{2} \pi d^2 n \langle v \rangle = \sqrt{2}\sigma n \langle v \rangle, \quad \text{где } \sigma = \pi d^2
+\]
+\[
+\lambda = \frac{1}{\sqrt{2} \pi d^2 n} = \frac{1}{\sqrt{2} \sigma n}
+\]
+
+При нормальных условиях концентрация равна:
+\[
+n = N_L = 2,\!7 \times 10^{19} \text{ см}^{-3}
+\]
+\[
+\lambda \approx 1,\!7 \times 10^{-5} \text{ см} = 170 \text{ нм}
+\]
+\[
+\langle v \rangle \approx 10^{-1} \, \text{км/с}
+\]
+\[
+\tau = \frac{1}{\vartheta} \approx 10^{-9} \text{ с}
+\]
+
+За это время устанавливается распределение Максвелла.
+
+\begin{tbox}{Распределение Максвелла}
+	\textbf{Распределение Максвелла} описывает распределение молекул газа по скоростям в условиях термодинамического равновесия. Для идеального газа вероятность того, что молекула имеет скорость в интервале от $v$ до $v+dv$, задаётся функцией:
+
+	\[
+	f(v) = 4\pi \left(\frac{m}{2\pi k T}\right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2k T}\right)
+	\]
+
+	где:
+	\begin{itemize}
+		\item $m$ — масса молекулы
+		\item $k$ — постоянная Больцмана ($1,380649 \times 10^{-23} \, \frac{\text{Дж}}{\text{К}}$)
+		\item $T$ — абсолютная температура
+		\item $v$ — скорость молекулы
+	\end{itemize}
+
+	Характерные скорости:
+	\begin{enumerate}
+		\item \textbf{Наиболее вероятная скорость} (соответствует максимуму распределения):
+		\[
+		v_{\text{вер}} = \sqrt{\frac{2k_B T}{m}}
+		\]
+
+		\item \textbf{Средняя скорость}:
+		\[
+		\langle v \rangle = \sqrt{\frac{8k_B T}{\pi m}}
+		\]
+
+		\item \textbf{Среднеквадратичная скорость}:
+		\[
+		v_{\text{ск}} = \sqrt{\frac{3k_B T}{m}}
+		\]
+	\end{enumerate}
+
+	Соотношение между характерными скоростями:
+	\[
+	v_{\text{вер}} : \langle v \rangle : v_{\text{ск}} = 1 : \sqrt{\frac{4}{\pi}} : \sqrt{\frac{3}{2}} \approx 1 : 1,128 : 1,225
+	\]
+
+	За время порядка $\tau \approx 10^{-9}$ с после соударения устанавливается распределение Максвелла.
+\end{tbox}

@@ -1,0 +1,28 @@
+\subsection{Теорема Гюйгенса-Штейнера}
+\[\boxed{J = J_c + ma^2}\]
+\begin{center}
+	Момент инерции относительно произвольной оси равен сумме момента инерции относительно оси, параллельной данной и проходящей через центр масс тема, и произведению массы тела на квадрат расстояния между осями.
+\end{center}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"image/Теорема Гюгенса-Штейнера"}
+	\caption{Доказательство теоремы Гюгенса-Штейнера}
+	\label{fig:1}
+\end{figure}
+
+\subsubsection*{Доказательство}
+\vspace{-2em}
+\begin{gather*}
+	\vec{r_{\perp}'} = \vec{r_\perp} + \vec{a}\\
+	J = \int_m {r_{\perp}'}^2 \, dm = \int_m {r_\perp}^2 \, dm + 2 \vec{a} \underbrace{\int_m \vec{r_\perp} \, dm}_{0} + a^2 \int_m \, dm = \boxed{J_c + ma^2}
+\end{gather*}
+\begin{center}
+	\textbf{Что и требовалось доказать!}
+\end{center}
+
+Точки $O$ и $O'$ являются взаимными или сопряженными в том смысле если, подвесить маятник в точке $O'$, то центр качания будет в точке $O$, а период не изменится.
+
+\subsubsection*{Доказательство}
+\[\begin{aligned}
+	l_{\text{пр}}' = r_c' + \frac{J_c}{m r_c'} = \frac{J_c}{mr_c} + r_c = l_{\text{пр}}  &&&& r_c' = \frac{J_c}{mr_c}
+\end{aligned}\]

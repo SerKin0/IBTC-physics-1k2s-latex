@@ -1,0 +1,73 @@
+\subsection{Броуновское движение. Формула Эйнштейна}
+\subsubsection*{Броуновское движение}
+\textbf{Броуновское движение} - это непрерывное хаотическое движение макроскопических частиц в жидкости или газе, вызванное ударами молекул окружающей среды.
+
+Частица образует с молекулами газа единую систему \textbf{ТРРЭПСС} (термодинамически равновесную систему с равномерно распределённой энергией по степеням свободы).
+
+Будем считать, что смещения статистически независимы: смещение от $0$ до $t_1$ и от $t_1$ до $t$ ничего не дает в корреляции.
+\begin{gather*}
+	\langle x^2 \rangle = \langle x_1^2\rangle + \langle x_2^2\rangle\\
+	\langle x^2 \rangle = f(t) \\
+	\begin{aligned}
+		\langle x_1^2 \rangle = f(t_1) && \langle x_2^2 \rangle = f(t - t_1)
+	\end{aligned}\\
+	f(t) = f(t_1) + f(t - t_1)
+\end{gather*}
+
+Единственное решение, удовлетворяющее этому функциональному уравнению - линейная зависимость:
+\begin{align*}
+	f(t) = \alpha t && \text{где } \alpha = \text{const}
+\end{align*}
+
+Таким образом получаем:
+\begin{align*}
+	\langle x^2 \rangle = \alpha t && \langle x^2\rangle = \langle y^2\rangle = \langle z^2 \rangle = \alpha t
+\end{align*}
+
+
+\subsubsection*{Формулы Эйнштейна}
+Уравнение Ланжевена для броуновской частицы:
+\[ m\ddot{x} = -h\dot{x} + F_x(t) \quad \Big|\cdot x \]
+где:
+\begin{itemize}
+	\item $m$ — масса частицы [кг]
+	\item $h$ — коэффициент трения [кг/с]
+	\item $F_x(t)$ — случайная сила [Н]
+	\item $x$ — координата частицы [м]
+\end{itemize}
+
+\[ mx\ddot{x} = -hx\dot{x} + xF_x(t) \]
+
+Используем тождества для производных:
+\[ \frac{d}{dt}(x^2) = 2x\dot{x}, \quad \frac{d^2}{dt^2}(x^2) = 2\dot{x}^2 + 2x\ddot{x} \]
+
+Выражаем $x\ddot{x}$:
+\[ x\ddot{x} = \frac{1}{2}\frac{d^2}{dt^2}x^2 - \dot{x}^2 \]
+
+Подставляем в уравнение:
+\[ \frac{m}{2}\frac{d^2}{dt^2}x^2 - m\dot{x}^2 = -\frac{h}{2}\frac{d}{dt}x^2 + xF_x(t) \]
+
+Усредняем:
+\[ \frac{m}{2}\frac{d^2}{dt^2}\langle x^2\rangle - \langle m\dot{x}^2\rangle = -\frac{h}{2}\frac{d}{dt}\langle x^2\rangle + \langle xF_x(t)\rangle \]
+
+Учитываем:
+\begin{itemize}
+	\item $\langle m\dot{x}^2\rangle = kT$ [Дж], где $k$ — постоянная Больцмана [Дж/К], $T$ — температура [К]
+	\item $\langle xF_x(t)\rangle = 0$ [Н·м]
+\end{itemize}
+
+Для стационарного режима ($t \gg m/h$):
+\[ -kT = -\frac{h}{2}\frac{d}{dt}\langle x^2\rangle \]
+
+Получаем:
+\[ \frac{d}{dt}\langle x^2\rangle = \frac{2kT}{h} \quad \text{[м$^2$/с]} \]
+
+Интегрируем:
+\[ \langle x^2\rangle = \frac{2kT}{h}t = \frac{kT}{3\pi\eta a}t \quad \text{[м$^2$]} \]
+где $\eta$ — вязкость жидкости [Па·с], $a$ — радиус частицы [м]
+
+Для трехмерного случая:
+\[ \langle r^2\rangle = \frac{kT}{\pi\eta a}t \quad \text{[м$^2$]} \]
+
+Итоговые формулы:
+\[ \boxed{\langle x^2\rangle = \frac{kT}{3\pi\eta a}t \quad [\text{м}^2]}, \quad \boxed{\langle r^2\rangle = \frac{kT}{\pi\eta a}t \quad [\text{м}^2]} \]

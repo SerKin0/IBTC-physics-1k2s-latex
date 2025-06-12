@@ -1,0 +1,139 @@
+% Файл: settings/pdflatex_notes.tex
+% Основные настройки для документов LaTeX
+
+% ========================================
+% Пакеты сгруппированы по функционалу
+% ========================================
+
+% Основные настройки документа
+\usepackage{geometry} % Настройки полей и страницы
+\usepackage[T2A]{fontenc} % Кодировка шрифтов для кириллицы
+\usepackage[utf8]{inputenc} % Кодировка текста
+\usepackage[russian]{babel} % Поддержка русского языка
+\usepackage{array}
+\usepackage{indentfirst} % Красная строка
+\usepackage{setspace} % Межстрочный интервал
+\usepackage{ulem} % Подчеркивания
+
+% Графика и оформление
+\usepackage[most]{tcolorbox} % Стильные боксы
+\usepackage{graphicx, wrapfig, caption, placeins} % Работа с изображениями
+\usepackage{float} % Позиционирование рисунков
+\usepackage{subcaption} % Подписи к подрисункам
+\usepackage{booktabs} % Профессиональные таблицы
+\usepackage{longtable} % Длинные таблицы
+
+% Математика
+\usepackage{amsmath, amssymb, amsfonts, mathtools, commath, cancel}
+\usepackage{bm} % Жирные математические символы
+\usepackage{nicefrac} % Красивые дроби
+
+% Заголовки и колонтитулы
+\usepackage{titlesec} % Стили заголовков
+\usepackage{fancyhdr} % Колонтитулы
+\usepackage{abraces} % Фигурные скобки
+
+% Гиперссылки (должен быть загружен последним!)
+\usepackage{hyperref}
+\usepackage{xurl} % Для переноса длинных URL
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning}
+
+% Основной размер шрифта и межстрочный интервал
+\renewcommand{\normalsize}{\fontsize{12pt}{14pt}\selectfont} % 12pt - размер, 14pt - межстрочный интервал
+
+% ========================================
+% Основные настройки
+% ========================================
+
+% Шрифты
+\renewcommand{\rmdefault}{cmr} % Основной шрифт (Computer Modern)
+\renewcommand{\sfdefault}{cmss} % Без засечек
+\renewcommand{\ttdefault}{cmtt} % Моноширинный
+
+% Абзацные отступы и интервалы
+\setlength{\parindent}{1.5em} % Абзацный отступ
+\setlength{\parskip}{0.5em} % Интервал между абзацами
+
+% Настройка geometry
+\geometry{
+	a5paper,
+	left=10mm,
+	right=10mm,
+	top=5mm,
+	bottom=10mm,
+	headheight=10mm,
+	headsep=4mm,
+	footskip=10mm,
+	includeheadfoot
+}
+
+% Стили заголовков
+\titleformat{\section}[block]{\bfseries\centering\newpage}{\thesection.}{0.5em}{}[]
+\titleformat{\subsection}[block]{\bfseries\centering}{\thesubsection.}{0.5em}{}[]
+\titleformat{\subsubsection}[block]{\bfseries\centering}{}{0.5em}{}[]
+
+% Настройка колонтитулов
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Скороходов С.А.}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+
+% Настройка математики
+\numberwithin{equation}{subsection}
+\mathtoolsset{showonlyrefs=false}
+
+% Настройка изображений
+\graphicspath{{./img/}}
+\renewcommand{\figurename}{Рис.}
+\captionsetup{labelsep=space}
+
+% Гиперссылки
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	pdftitle={Заметки},
+	pdfpagemode=FullScreen,
+}
+
+% ========================================
+% Пользовательские команды
+% ========================================
+
+% Блоки определений
+\newtcolorbox{tbox}[2][]{
+	colback=white!98!black,
+	colframe=white!80!black,
+	fonttitle=\bfseries,
+	coltitle=black,
+	title={#2},
+	breakable,
+	standard,
+	before={\addcontentsline{toc}{subsubsection}{\protect\numberline{}#2}}
+}
+
+% Теоремы и определения
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\bfseries Теорема}
+\newtheorem{corollary}[theorem]{Следствие}
+\newtheorem*{proof*}{Доказательство}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}[section]
+\newtheorem{example}{Пример}[section]
+
+% Удобные математические операторы
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\rot}{rot}
