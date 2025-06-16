@@ -5,9 +5,6 @@
 	\vec{r}_c = \frac{\sum_{i=1}^{n} m_i \vec{r}_i}{M} &&&& M = \sum_{i=1}^{n} m_i
 \end{aligned}\]
 
-Расположение центра масс не зависит от выбора точки:
-\[\vec{r}_i = \vec{r}_i' + \vec{\rho}\]
-
 Рассчитаем скорость центра масс:
 \begin{multline*}
 	\vec{v}_c = \dd{\vec{r}_c}{t} = \frac{1}{M} \dd{}{t} \Big(\sum_{i=1}^{n} m_i \vec{r}_{i}\Big) = \frac{1}{M} \sum_{i=1}^{n} m_i \vec{v}_i = \frac{\vec{p}}{M} \Rightarrow \boxed{\vec{p} = M \vec{v}_c}
@@ -20,6 +17,9 @@
 
 \begin{tbox}{Замечания}
 	\begin{enumerate}
+		\item Расположение центра масс не зависит от выбора точки:
+		\[\vec{r}_i = \vec{r}_i^{\,\prime} + \vec{\rho}\]
+		\[\vec{r}_i = \frac{1}{M} \sum_{i=1}^{n} m_i \vec{r}_i = \frac{1}{M} \sum_{i=1}^n m_i \vec{r}_i^{\,\prime} + \frac{1}{M} \sum_{i=1}^{n} m_i \vec{\rho} = \vec{r}_i^{\,\prime} + \vec{\rho}\]
 		\item Внутренние силы не влияют на движение центра масс. Они воздействуют на него, но опосредованно;
 		\item Теорема о движении центра масс предоставляет общее представление о системе. Для более детального анализа систему переводят в систему отсчета, связанную с центром масс, и исследуют ее более подробно.
 	\end{enumerate}
