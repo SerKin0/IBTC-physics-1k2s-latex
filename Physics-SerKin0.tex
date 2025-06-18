@@ -2,6 +2,9 @@
 
 \input{settings/pdflatex_notes.tex}
 
+\addbibresource{BibTeX/references.bib} % Подключаем "виртуальный" .bib-файл
+
+
 \usepackage{draftwatermark}
 \usepackage{xfrac}
 \SetWatermarkFontSize{10pt}  % Explicitly set reasonable size
@@ -21,8 +24,8 @@
 \newcommand{\nsum}[2]{\sum\limits_{n = #1}^{#2}}
 \newcommand{\lint}[2]{\int\limits_{#1}^{#2}}
 
-\newcommand{\dd}[2]{\frac{d \, #1}{d \, #2}}
-\newcommand{\pp}[2]{\frac{\partial \, #1}{\partial \, #2}}
+\newcommand{\dd}[2]{\dfrac{d \, #1}{d \, #2}}
+\newcommand{\pp}[2]{\dfrac{\partial \, #1}{\partial \, #2}}
 
 
 \begin{document}
@@ -35,6 +38,13 @@
 
 	\subsection*{Предупреждение}
 	Данные ответы были составлены не самым умным студентом из-за чего могут встречаться различного рода ошибки. Просим сообщать о их нахождении по контактным данным, указанные в конце документа.
+
+	\subsection*{Благодарность}
+	Благодарность хотелось бы выразить таким людям, как:
+	\begin{itemize}
+		\item \href{https://t.me/o_s_so}{Osso} за предоставление красиво оформленных лекций;
+		\item \href{https://t.me/ka_vo}{Помелову Сергею Дмитриевичу};
+	\end{itemize}
 
 	\nopagebreak
 	\include{source/questions/1}
@@ -72,8 +82,6 @@
 	\include{source/questions/33}
 	\include{source/questions/34}
 	\include{source/questions/35}
-
-	%\include{source/questions.tex}
-
+	\include{source/bibliography}
 	\include{source/contacts.tex}
 \end{document}

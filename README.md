@@ -1,6 +1,30 @@
 # Ответы на билеты по физике 1 курс 2 семестр
 
-Answers to questions on the course of the IBTS Faculty of Radiophysics for 1st year students, 2nd semester, teacher Irina Zhukova
+Ответы на вопросы по курсу "Информационная Безопасность Телекоммуникационных Систем" для студентов первого курса Радиофизического факультета за второй семестр. Преподаватель — Ирина Жукова.
+
+### Установка и настройка
+
+1. **Клонируйте репозиторий**:
+```bash
+git clone https://github.com/SerKin0/IBTC-physics-1k2s-latex.git
+cd IBTC-physics-1k2s-latex
+```
+
+2. **Настройка TeXstudio (опционально)**:
+
+Откройте:
+```
+Параметры → Конфигурация TeXstudio... → Команды
+```
+
+Установите следующие команды:
+
+| Команда    | Значение                                                                 |
+|------------|--------------------------------------------------------------------------|
+| `pdflatex` | `pdflatex.exe -synctex=1 -aux-directory="temp" -interaction=nonstopmode %.tex` |
+| `BibTeX`   | `bibtex.exe --input-directory="temp" --output-directory="temp" %.aux`    |
+| `Biber`    | `biber.exe --input-directory="temp" --output-directory="temp" temp/%`    |
+
 
 ## Список вопросов
 

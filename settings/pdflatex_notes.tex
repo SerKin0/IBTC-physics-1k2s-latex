@@ -7,9 +7,6 @@
 
 % Основные настройки документа
 \usepackage{geometry} % Настройки полей и страницы
-\usepackage[T2A]{fontenc} % Кодировка шрифтов для кириллицы
-\usepackage[utf8]{inputenc} % Кодировка текста
-\usepackage[russian]{babel} % Поддержка русского языка
 \usepackage{array}
 \usepackage{indentfirst} % Красная строка
 \usepackage{setspace} % Межстрочный интервал
@@ -38,6 +35,11 @@
 \usepackage{xurl} % Для переноса длинных URL
 \usepackage{tikz}
 \usetikzlibrary{shapes, arrows.meta, positioning}
+\usepackage[style=gost-numeric, backend=biber, refsection=section]{biblatex}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{cmap}
+\usepackage[english,russian]{babel}
 
 % Основной размер шрифта и межстрочный интервал
 \renewcommand{\normalsize}{\fontsize{12pt}{13pt}\selectfont} % 12pt - размер, 14pt - межстрочный интервал
@@ -89,7 +91,7 @@
 
 % Настройка изображений
 \graphicspath{{./img/}}
-\renewcommand{\figurename}{Рис.}
+\renewcommand{\figurename}{Рисунок }
 \captionsetup{labelsep=space}
 
 % Гиперссылки

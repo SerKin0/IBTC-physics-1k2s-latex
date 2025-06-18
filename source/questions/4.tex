@@ -1,1 +1,13 @@
 \subsection{\textbf{Теорема об изменении момента импульса с.м.т.} Закон сохранения момента импульса.}
+
+\textbf{Момент импульса системы материальных точек} относительно начала координат $O$ — это сумма моментов импульса всех точек системы, взятых относительно того же начала $O$.
+
+\[\vec{N} = \sum_{i=1}^{n} [\vec{r}_i; \, \vec{p}_i]\]
+\begin{align*}
+	&\dd{\vec{N}_1}{t} = [\vec{r}_1; \, \vec{f}_{21}] + \dots + [\vec{r}_i; \, \vec{f}_{i1}] + \dots + [\vec{r}_1; \, \vec{f}_{n1}] + [\vec{r}_1; \, \vec{F}_{1}] \\
+	&\dd{\vec{N}_i}{t} = [\vec{r}_i; \, \vec{f}_{1i}] + \dots + [\vec{r}_i; \, \vec{f}_{i-1 \, i}] + [\vec{r}_i; \, \vec{f}_{i+1 \, i}] + \dots + [\vec{r}_i; \, \vec{f}_{ni}] + [\vec{r}_i; \, \vec{F}_{i}] \\
+	&\dd{\vec{N}_n}{t} = [\vec{r}_n; \, \vec{f}_{1n}] + \dots + [\vec{r}_n; \, \vec{f}_{in}] + \dots + [\vec{r}_n; \, \vec{f}_{n-1 \, n}] + [\vec{r}_n; \, \vec{F}_{n}]
+\end{align*}
+\begin{align*}
+	\sum_{i=1}^{n} \dd{\vec{N}_i}{t} = \sum_{i=1}^{n} [\vec{r}_i; \, \vec{F}_i] && \sum_{i=1}^{n} \dd{\vec{N}_i}{t} = \dd{}{t} \sum_{i=1}^{n} \vec{N}_i = \dd{\vec{N}}{t}
+\end{align*}
