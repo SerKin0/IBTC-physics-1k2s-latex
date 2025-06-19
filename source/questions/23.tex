@@ -1,1 +1,41 @@
 \subsection{Внутреннее трение в газах. Формула Ньютона, расчет вязкости}
+
+Рассмотрим ламинарный\footnote{Ламинарный поток -- поток, в котором слои не перемешиваются.} неоднородный поток (см. рис. \ref{fig:12}):
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{"image/Внутрение трение"}
+	\caption{Градиент внутреннего трения в газах}
+	\label{fig:12}
+\end{figure}
+
+Эмпирический закон Ньютона:
+\begin{align} \label{23.1}
+	\boxed{
+		F_\text{тр} = \eta \left|\dd{u_x}{y}\right|S
+	}
+\end{align}
+где $\eta$ -- динамическая вязкость, $\dd{u_x}{y}$ -- градиент скорости.
+
+В формуле \eqref{23.1} переносится импульс:
+\begin{align*}
+	\dd{\vec{p}}{t} = \vec{F}_\text{тр} && J_y^{(p_x)} = -\eta \dd{u_x}{y} S && \vec{v} =\vec{v}_\text{тела} + \vec{u}
+\end{align*}
+\subsubsection*{Доказательство}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{"image/Внутрение трение 2"}
+	\caption{Иллюстрация к доказательству}
+	\label{fig:13}
+\end{figure}
+Смотреть рисунок \ref{fig:13}:
+\begin{align*}
+	(1) \, \frac{1}{6} n \langle v \rangle dt \cdot Smu_x(y-\lambda) && (2) \frac{1}{6} n \langle v \rangle dt \cdot Smu_x(y+\lambda)
+\end{align*}
+\[dp_x = \frac{1}{6} n \langle v \rangle dt \cdot Sm(u_x(y - \lambda) - u_x(y + \lambda)) = - \dd{u_x}{y}\cdot 2\lambda\]
+\[\boxed{J_y^{(p_x)} = \dd{p_x}{t} = - \underbrace{\frac{1}{3}\lambda n \langle v \rangle m}_\eta \dd{u_x}{y} \cdot S = - \eta \dd{u_x}{y}S}\]
+
+\textbf{Вывод:} Вязкость не зависит от концентрации.
+
+С уменьшением концентрации уменьшается число переносчиков упорядоченного импульса, но при этом увеличивается длина свободного пробега и молекулы с дальних расстояний попадают в другой слой увеличивая поток переносимых молекул.
+
+Парадокс возникает когда $n \to 0$. Работает при $\lambda \ll$, $L$ -- характерный размер системы.
